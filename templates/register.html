@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="card" data-tilt>
+        <div class="wrapper">
+            <h3 class="login-text">SIGN UP</h3>
+            <div class="formcontainer">
+                <form method="POST" action="register">
+                  {% csrf_token %}
+                  {% for message in messages %}
+                    <span class="message-text">{{message}}</span>
+                  {% endfor %}
+                  <br>
+                    <label for="mail"><strong>Username</strong></label>
+                    <input type="text" placeholder="Enter username: " name="username" required> 
+                    <br>                    
+                    <label for="mail"><strong>Email</strong></label>
+                    <input type="email" placeholder="Enter E-mail: " name="email" required> 
+                    <br>
+                    <label for="mail"><strong>Password</strong></label>
+                    <input type="password" placeholder="Enter Password: " name="password" required>
+                    <br>
+                    <label for="mail"><strong>Re-type Password</strong></label>
+                    <input type="password" placeholder="Enter Password Again: " name="password2" required>
+                    <br>
+                    
+                    <button type="submit" class="login-btn"><strong>SIGN UP</strong></button>
+                    <br>
+                    <div class="buttom-text">
+                      <p class="bottom-form-text"><strong>Already have an account? </strong><span class="psw-r"><a href="login">Log In</a></span></p>
+                    
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        
+    </div>
+  </div>
+  <script src="{% static 'css/vanilla-tilt.js' %}"></script>
+</body>
+</html>
