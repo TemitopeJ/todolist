@@ -7,4 +7,4 @@ psycopg2==2.9.5
 python-dotenv==0.17.0
 sqlparse==0.4.3
 tzdata==2022.7
-Python==3.10.5
+Python==3.10.6
