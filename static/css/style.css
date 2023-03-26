@@ -203,9 +203,6 @@ header .nav-pills a:hover{
 }
 
 
-form {
-    /* border: 5px solid #f1f1f1; */
-}
 input[type=text], input[type=email], input[type=password] {
     width: 100%;
     padding: 16px 8px;
@@ -314,9 +311,4 @@ span.psw-r {
     justify-content: center;
     align-items: center;
 
-}
-.todo-form{
-    /* display: inline-block;
-    justify-content: center;
-    align-items: center; */
 }

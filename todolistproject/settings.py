@@ -31,19 +31,20 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', 'justdo.onrender.com']
+ALLOWED_HOSTS = ['justdo.onrender.com', 'http://127.0.0.1:8000/', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'myapp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp'
+    
 ]
 
 MIDDLEWARE = [
@@ -92,12 +93,12 @@ DATABASES = {
 }
 
 #Email forgot password configurations
-EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND'),
-EMAIL_HOST = os.environ.get('EMAIL_HOST'),
-EMAIL_PORT = os.environ.get('EMAIL_PORT'),
-EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS'),
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER'),
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD'),
+EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND')
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 
 # Password validation
